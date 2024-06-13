@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="d-flex justify-content-center">
+      <div className="container d-flex justify-content-center">
         <Shop />
       </div>
     </>
