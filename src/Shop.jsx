@@ -1,15 +1,16 @@
 import { useDispatch } from "react-redux";
 import { action } from "./state";
+import { bindActionCreators } from "redux";
 const Shop = () => {
   const dispatch = useDispatch();
-
+  const actions = bindActionCreators(action, dispatch);
   return (
     <div>
       <h1>Deposit / Withdraw Money </h1>
       <button
         className="btn btn-primary m-2"
         onClick={() => {
-          dispatch(action.withdrawMoney(100));
+          actions.withdrawMoney(100);
         }}
       >
         -
@@ -18,7 +19,7 @@ const Shop = () => {
       <button
         className="btn btn-primary m-2"
         onClick={() => {
-          dispatch(action.depositMoney(200));
+          actions.depositMoney(100);
         }}
       >
         +
